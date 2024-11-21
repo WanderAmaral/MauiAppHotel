@@ -18,17 +18,33 @@
         <Frame Padding="10">
             <VerticalStackLayout>
                 <Grid RowDefinitions="Auto, Auto" ColumnDefinitions="*, *, 2*">
-                    <Label Grid.Row="0" Grid.Column="0" Text="Adultos:" />
+                    <Label Grid.Row="0" Grid.Column="0" 
+                           Text="Adultos:" />
 
-                    <Label Grid.Row="0" Grid.Column="1" Text="{Binding Value}" BindingContext="{x:Reference stp_adultos}" TextColor="{StaticResource Primary}" />
+                    <Label Grid.Row="0" Grid.Column="1" 
+                           Text="{Binding Value}" 
+                           BindingContext="{x:Reference stp_adultos}" 
+                           TextColor="{StaticResource Primary}"/>
 
-                    <Stepper  Grid.Row="0" Grid.Column="2" x:Name="stp_adultos" Minimum="0" Maximum="10" Increment="1" />
+                    <Stepper  Grid.Row="0" Grid.Column="2" 
+                              x:Name="stp_adultos" 
+                              Minimum="0" 
+                              Maximum="10" 
+                              Increment="1" />
 
-                    <Label Grid.Row="1" Grid.Column="0" Text="Crianças:"/>
+                    <Label Grid.Row="1" Grid.Column="0" 
+                           Text="Crianças:" />
 
-                    <Label Grid.Row="1" Grid.Column="1" Text="{Binding Value}" BindingContext="{x:Reference stp_criancas}" TextColor="{StaticResource Primary}" />
+                    <Label Grid.Row="1" Grid.Column="1" 
+                           Text="{Binding Value}" 
+                           BindingContext="{x:Reference stp_criancas}" 
+                           TextColor="{StaticResource Primary}"/>
 
-                    <Stepper Grid.Row="1" Grid.Column="2" x:Name="stp_criancas" Minimum="0" Margin="10" Increment="1" />
+                    <Stepper Grid.Row="1" Grid.Column="2" 
+                             x:Name="stp_criancas" 
+                             Minimum="0" 
+                             Margin="10" 
+                             Increment="1" />
                         
                 </Grid>
             </VerticalStackLayout>
