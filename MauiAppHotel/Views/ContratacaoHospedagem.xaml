@@ -58,14 +58,30 @@
                 <Frame Padding="10" Margin="10">
                     <VerticalStackLayout>
                         <Label Text="Periodo da Estadia"/>
-                        <HorizontalStackLayout>
-                            <Label Text="Check-in:" />
-                            <DatePicker x:Name="dtpck_checkin" DateSelected="dtpck_checkin_DateSelected" Format="dd/MM/yyyy" />
-                        </HorizontalStackLayout>
-                        <HorizontalStackLayout>
-                            <Label Text="Check-in:" />
-                            <DatePicker x:Name="dtpck_checkout" Format="dd/MM/yyyy" />
-                        </HorizontalStackLayout>
+                        <Grid ColumnDefinitions="Auto, *" HorizontalOptions="FillAndExpand" Margin="5">
+                            <Label 
+                            Text="Check-in:" 
+                            Grid.Column="0" />
+                                                
+                            <DatePicker 
+                            x:Name="dtpck_checkin" 
+                            DateSelected="dtpck_checkin_DateSelected" 
+                            Format="dd/MM/yyyy" 
+                            Grid.Column="1" 
+                            HorizontalOptions="End" />
+                        </Grid>
+                        <Grid ColumnDefinitions="Auto, *" HorizontalOptions="FillAndExpand" Margin="5">
+                            <Label 
+                            Text="Check-in:" 
+                            Grid.Column="0" />
+                                               
+                            <DatePicker 
+                            x:Name="dtpck_checkin" 
+                            DateSelected="dtpck_checkin_DateSelected" 
+                            Format="dd/MM/yyyy" 
+                            Grid.Column="1" 
+                            HorizontalOptions="End" />
+                        </Grid>
                     </VerticalStackLayout>
                 </Frame>
 
