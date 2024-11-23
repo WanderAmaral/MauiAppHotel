@@ -72,12 +72,12 @@
                         </Grid>
                         <Grid ColumnDefinitions="Auto, *" HorizontalOptions="FillAndExpand" Margin="5">
                             <Label 
-                            Text="Check-in:" 
+                            Text="Check-out:" 
                             Grid.Column="0" />
                                                
                             <DatePicker 
-                            x:Name="dtpck_checkin" 
-                            DateSelected="dtpck_checkin_DateSelected" 
+                            x:Name="dtpck_checkout" 
+                            
                             Format="dd/MM/yyyy" 
                             Grid.Column="1" 
                             HorizontalOptions="End" />

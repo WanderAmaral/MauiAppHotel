@@ -11,9 +11,15 @@ public partial class ContratacaoHospedagem : ContentPage
 
 		PropriedadesApp = (App)Application.Current;
 
-		pck_quarto.ItemsSource = PropriedadesApp.list_quartos;
+        pck_quarto.ItemsSource = PropriedadesApp.list_quartos;
 
-		dtpck_checkin.MinimumDate = DateTime.Now;
+        // Verifica se há itens na lista e define o primeiro como padrão
+        if (PropriedadesApp.list_quartos != null && PropriedadesApp.list_quartos.Any())
+        {
+            pck_quarto.SelectedItem = PropriedadesApp.list_quartos.First(); // Define o primeiro item como padrão
+        }
+
+        dtpck_checkin.MinimumDate = DateTime.Now;
 		dtpck_checkout.MinimumDate = new DateTime(DateTime.Now.Year, DateTime.Now.Month + 1, DateTime.Now.Day);
 
 		dtpck_checkout.MinimumDate = dtpck_checkin.Date.AddDays(1);
